@@ -1,7 +1,8 @@
+# Root-level outputs if needed
 output "vpc_name" {
-  value = google_compute_network.secure_vpc.name
+  value = module.network.vpc_network_name
 }
 
 output "subnet_ip_range" {
-  value = google_compute_subnetwork.secure_subnet.ip_cidr_range
+  value = module.network.subnet_ip_range
 }
